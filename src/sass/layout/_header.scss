@@ -1,0 +1,25 @@
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  box-shadow: 0 1px 6px -1px rgba(0,0,0,0.71);
+}
+
+.header__wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 1368px;
+  height: 71px;
+  padding-right: 80px;
+  padding-left: 118px;
+}
+
+.header__title,
+.header__logo-title {
+  @include visually-hidden;
+}

@@ -26,7 +26,7 @@ function browserSyncReload(done) {
 
 function styles() {
   return gulp.src([
-    'src/sass/main.scss'])
+    'src/sass/index.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', notify.onError()))
     .pipe(autoprefixer(['last 4 versions']))

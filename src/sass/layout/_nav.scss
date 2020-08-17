@@ -1,0 +1,21 @@
+.nav__list {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+}
+
+.nav__item {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.nav__item a {
+  color: #1A212F;
+}
+
+.nav__item:not(:last-child) {
+  margin-right: 30px;
+}
