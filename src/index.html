@@ -9,49 +9,245 @@
     <link rel="stylesheet" href="./css/index.css?ver=2">
 </head>
 <body>
-    <header class="header">
-        <div class="header__wrapper">
-            <h1 class="header__title">
-                Интернет магазин "Котейка"
-            </h1>
-            <section class="header__logo">
-                <h3 class="header__logo-title">
-                    Логотип "Котейка"
+<header class="header">
+    <div class="header__wrapper">
+        <h1 class="header__title">
+            Интернет магазин "Котейка"
+        </h1>
+        <section class="header__logo">
+            <h3 class="header__logo-title">
+                Логотип "Котейка"
+            </h3>
+            <a href="./main"
+               aria-label="Логотип 'Котейка'"
+            >
+                <img src="./assets/img/logo.svg"
+                     alt="Логотип 'Котейка'"
+                     width="64"
+                     height="52"
+                >
+            </a>
+        </section>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="./about">
+                        Почему мы?
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./catalog">
+                        Номера
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./feedbacks">
+                        Отзывы
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./contacts">
+                        Как нас найти
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <h2 class="main__title">
+        Наши номера
+    </h2>
+    <div class="main__wrapper">
+        <form class="main__form form"
+              method="post"
+        >
+            <fieldset class="form__price">
+                <h3 class="form__price-title">
+                    Цена за сутки, &#8381;
                 </h3>
-                <a aria-label="Логотип 'Котейка'">
-                    <img src="./assets/img/logo.svg"
-                         alt="Логотип 'Котейка'">
-                </a>
-            </section>
-            <nav class="header__nav nav">
-                <ul class="nav__list">
-                    <li class="nav__item">
-                        <a href="./about">
-                            Почему мы?
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./catalog">
-                            Номера
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./feedbacks">
-                            Отзывы
-                        </a>
-                    </li>
-                    <li class="nav__item">
-                        <a href="./contacts">
-                            Как нас найти
-                        </a>
-                    </li>
-                </ul>
-            </nav>
-        </div>
-    </header>
-    <main class="main">
-
-    </main>
+                <div class="form__price-wrapper">
+                    <label class="form__price-label"
+                           for="min-price"
+                    >
+                            <span>
+                                От
+                            </span>
+                        <input type="number"
+                               id="min-price"
+                               name="min-price"
+                               value="100"
+                        >
+                    </label>
+                    <label class="form__price-label"
+                           for="max-price"
+                    >
+                            <span>
+                                До
+                            </span>
+                        <input type="number"
+                               id="max-price"
+                               name="max-price"
+                               value="600"
+                        >
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form__square">
+                <h3 class="form__square-title">
+                    Площадь
+                </h3>
+                <label class="form__square-label"
+                       for="063-square">
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="063-square"
+                           name="square"
+                           value="063"
+                    >
+                    <span>
+                        0.63 м2
+                    </span>
+                </label>
+                <label class="form__square-label"
+                       for="090-square">
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="090-square"
+                           name="square"
+                           value="090"
+                    >
+                    <span>
+                        0.90 м2
+                    </span>
+                </label>
+                <label class="form__square-label"
+                       for="113-square">
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="113-square"
+                           name="square"
+                           value="113"
+                    >
+                    <span>
+                        1.13 м2
+                    </span>
+                </label>
+                <label class="form__square-label"
+                       for="156-square">
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="156-square"
+                           name="square"
+                           value="156"
+                    >
+                    <span>
+                        1.56 м2
+                    </span>
+                </label>
+                <label class="form__square-label"
+                       for="256-square">
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="256-square"
+                           name="square"
+                           value="256"
+                    >
+                    <span>
+                        2.56 м2
+                    </span>
+                </label>
+                <label class="form__square-label"
+                       for="257-square">
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="257-square"
+                           name="square"
+                           value="257"
+                    >
+                    <span>
+                        2.57 м2
+                    </span>
+                </label>
+            </fieldset>
+            <fieldset class="form__type">
+                <h3 class="form__type-title">
+                    Оснащение номера
+                </h3>
+                <label class="form__type-label"
+                       for="free-type">
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="free-type"
+                           name="type"
+                           value="free"
+                    >
+                    <span>
+                        Пустой номер
+                    </span>
+                </label>
+                <label class="form__type-label"
+                       for="lounger-type">
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="lounger-type"
+                           name="type"
+                           value="lounger"
+                    >
+                    <span>
+                        Лежак
+                    </span>
+                </label>
+                <label class="form__type-label"
+                       for="scratch-type">
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="scratch-type"
+                           name="type"
+                           value="scratch"
+                    >
+                    <span>
+                        Когтеточка
+                    </span>
+                </label>
+                <label class="form__type-label"
+                       for="game-type">
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="game-type"
+                           name="type"
+                           value="game"
+                    >
+                    <span>
+                        Игровой комплекс
+                    </span>
+                </label>
+                <label class="form__type-label"
+                       for="house-type">
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="house-type"
+                           name="type"
+                           value="house"
+                    >
+                    <span>
+                        Домик
+                    </span>
+                </label>
+            </fieldset>
+            <button class="form__submit"
+                    type="submit"
+            >
+                Применить
+            </button>
+            <button class="form__reset"
+                    type="reset"
+            >
+                Сбросить фильтр
+            </button>
+        </form>
+    </div>
+</main>
 <script src="./js/index.js?ver=2" type="module"></script>
 </body>
 </html>

@@ -1,7 +1,18 @@
 .main {
   display: flex;
-  align-items: center;
+  justify-content: space-between;
+  flex-direction: column;
   width: 1368px;
-  height: 1000px;
   margin: 71px auto 0;
+  padding: 62px 80px 0 118px;
+}
+
+.main__title {
+  margin: 0 0 62px;
+  padding: 0;
+  font-family: 'Rubik', 'Arial', sans-serif;
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 43px;
+  color: #151B28;
 }

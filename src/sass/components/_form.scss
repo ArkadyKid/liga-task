@@ -1,0 +1,143 @@
+.form {
+  width: 210px;
+}
+
+.form__price,
+.form__square,
+.form__type {
+  display: flex;
+  flex-direction: column;
+  margin: 0 0 35px 0;
+  padding: 0;
+  border: none;
+}
+
+.form__price-title,
+.form__square-title,
+.form__type-title {
+  margin: 0 0 16px;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.form__price-wrapper {
+  display: flex;
+}
+
+.form__price-label {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 14px;
+}
+
+.form__price-label span {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  left: 5px;
+}
+
+.form__price-label input {
+  width: 100px;
+  height: 24px;
+  padding-left: 25px;
+  border: 1px solid #E1E1E1;
+}
+
+.form__price-label:not(:last-child) input {
+  margin-right: 10px;
+}
+
+.form__square,
+.form__type {
+  margin-bottom: 40px;
+}
+
+.form__square-title,
+.form__type-title {
+  margin-bottom: 25px;
+}
+
+.form__square-label,
+.form__type-label {
+  position: relative;
+  font-size: 14px;
+  margin-left: 30px;
+  cursor: pointer;
+}
+
+.form__square-label:not(:last-child),
+.form__type-label:not(:last-child) {
+  margin-bottom: 25px;
+}
+
+.form__square-label input,
+.form__type-label input {
+  @include visually-hidden;
+}
+
+.form__square-label span::before,
+.form__type-label span::before {
+  position: absolute;
+  top: 50%;
+  left: -30px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid #E1E1E1;
+  transform: translateY(-50%);
+  content: '';
+}
+
+.form__square-input:checked + span::after,
+.form__type-input:checked + span::after {
+  position: absolute;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  content: url('../assets/img/check-icon.svg');
+}
+
+.form__square-label:hover span::before,
+.form__square-input:focus + span::before,
+.form__type-label:hover span::before,
+.form__type-input:focus + span::before {
+  opacity: 0.7;
+}
+
+.form__type-title {
+  margin-bottom: 25px;
+}
+
+.form__submit,
+.form__reset {
+  width: 185px;
+  padding: 15px 0 17px;
+  border-radius: 25px;
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 17px;
+  cursor: pointer;
+}
+
+.form__submit {
+  margin-bottom: 11px;
+  border: 2px solid #FAC663;
+  background: #FAC663;
+}
+
+.form__reset {
+  background: #FFFFFF;
+  border: 2px solid #FAC663;
+  box-shadow: 04px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 25px;
+}
+
+.form__submit:hover,
+.form__submit:focus,
+.form__reset:focus,
+.form__reset:hover {
+  opacity: 0.7;
+}
