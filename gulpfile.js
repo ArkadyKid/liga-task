@@ -5,7 +5,6 @@ import concat from 'gulp-concat';
 import autoprefixer from 'gulp-autoprefixer';
 import notify from 'gulp-notify';
 import csso from 'gulp-csso';
-import twig from 'gulp-twig';
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
 import uglify from 'gulp-uglify';
@@ -27,8 +26,7 @@ function browserSyncReload(done) {
 
 function styles() {
   return gulp.src([
-      'src/sass/main.scss',
-    ])
+    'src/sass/main.scss'])
     .pipe(sourcemaps.init())
     .pipe(sass({ outputStyle: 'expanded' }).on('error', notify.onError()))
     .pipe(autoprefixer(['last 4 versions']))
@@ -40,14 +38,13 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-function twigGulp() {
-  return gulp.src('src/index.twig').pipe(twig()).pipe(gulp.dest('dist'));
+function html() {
+  return gulp.src('src/index.html').pipe(gulp.dest('dist'));
 }
 
 function scripts() {
   return gulp.src([
-      'src/js/index.js',
-    ])
+    'src/js/index.js'])
     .pipe(concat('index.js'))
     .pipe(babel())
     .pipe(uglify())
@@ -68,11 +65,11 @@ function assets() {
 function watchFiles() {
   gulp.watch('src/**/*.scss', styles);
   gulp.watch('src/**/*.js', gulp.series(scripts, browserSyncReload));
-  gulp.watch('src/*.twig',
-    gulp.series(gulp.parallel(code, twigGulp), browserSyncReload));
+  gulp.watch('src/*.html',
+    gulp.series(gulp.parallel(code, html), browserSyncReload));
 }
 
-export const build = gulp.parallel(styles, scripts, assets, twigGulp);
+export const build = gulp.parallel(styles, scripts, assets, html);
 export const watch = gulp.parallel(watchFiles, bs);
 
 const def = gulp.series(build, watch);
