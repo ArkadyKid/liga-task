@@ -95,7 +95,7 @@
 }
 
 .form__square-input:checked + .form__square-label::after,
-.form__type-input:checked + .form__square-label::after {
+.form__type-input:checked + .form__type-label::after {
   position: absolute;
   top: 50%;
   left: -25px;
