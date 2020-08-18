@@ -1,5 +1,4 @@
 @import 'vendors/normalize';
-@import 'abstracts/variables';
 @import 'abstracts/mixins';
 @import 'base/base';
 @import 'layout/header';
@@ -7,4 +6,5 @@
 @import 'layout/main';
 @import 'components/form';
 @import 'components/catalog';
+@import 'components/sort';
 @import 'layout/footer';

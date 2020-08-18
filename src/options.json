@@ -77,5 +77,27 @@
         "title": "Домик"
       }
     ]
-  }
+  },
+  "sort": [
+    {
+      "text": "По площади",
+      "icon": "./assets/img/icons/sort/icon-up.svg",
+      "alt": "вверх"
+    },
+    {
+      "text": "По площади",
+      "icon": "./assets/img/icons/sort/icon-down.svg",
+      "alt": "вниз"
+    },
+    {
+      "text": "По цене",
+      "icon": "./assets/img/icons/sort/icon-up.svg",
+      "alt": "вверх"
+    },
+    {
+      "text": "По цене",
+      "icon": "./assets/img/icons/sort/icon-down.svg",
+      "alt": "вниз"
+    }
+  ]
 }

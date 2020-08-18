@@ -7,7 +7,8 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rubik:wght@400;500;700&display=swap"
+          rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css?ver=2">
 </head>
 <body>
@@ -111,18 +112,19 @@
                 </h3>
 
                 {% for place in filter.places %}
-                <label class="form__type-label"
-                       for="{{ place.id }}">
-                    <input class="form__type-input"
-                           type="checkbox"
-                           id="{{ place.id }}"
-                           name="place"
-                           value="{{ place.value }}"
+                    <label class="form__type-label"
+                           for="{{ place.id }}"
                     >
-                    <span>
+                        <input class="form__type-input"
+                               type="checkbox"
+                               id="{{ place.id }}"
+                               name="place"
+                               value="{{ place.value }}"
+                        >
+                        <span>
                         {{ place.title }}
                     </span>
-                </label>
+                    </label>
                 {% endfor %}
 
             </fieldset>
@@ -141,6 +143,31 @@
             <h2 class="catalog__title">
                 Каталог
             </h2>
+            <section class="main__sort sort">
+                <h3 class="sort__title">
+                    Сортировка
+                </h3>
+                <img class="sort__indicator"
+                     src="./assets/img/icons/sort/icon-open.svg"
+                     alt="индикатор"
+                >
+                <ul class="sort__list">
+
+                    {% for item in sort  %}
+                        <li class="sort__item">
+                            <button class="sort__select">
+                                <img src="{{ item.icon }}"
+                                     alt="{{ item.alt }}"
+                                     width="5"
+                                     height="10"
+                                >
+                                {{ item.text }}
+                            </button>
+                        </li>
+                    {% endfor %}
+
+                </ul>
+            </section>
             <ul class="catalog__list">
 
                 {% for item in products %}
@@ -155,12 +182,16 @@
                             {{ item.title }}
                         </span>
                             <dl class="catalog__item-options">
-                                <div class="catalog__item-option">
+                                {% set className = '' %}
+                                {% if item.size == false %}
+                                    {% set className = 'catalog__item-option--hidden' %}
+                                {% endif %}
+                                <div class="catalog__item-option {{ className }}">
                                     <dt>
                                         Размеры (ШхГхВ) -
                                     </dt>
                                     <dd>
-                                        {{ item.size }}
+                                        {{ item.size }} см
                                     </dd>
                                 </div>
                                 <div class="catalog__item-option">
@@ -168,7 +199,7 @@
                                         Площадь -
                                     </dt>
                                     <dd>
-                                        {{ item.square }}
+                                        {{ item.square }} м2
                                     </dd>
                                 </div>
                                 <div class="catalog__item-option">
@@ -177,9 +208,12 @@
                                     </dt>
                                     <dd>
                                         <div class="catalog__item-icons">
-                                            {% for img in item.images %}
-                                            <img src="./assets/img/icons/{{ img.src }}"
-                                                 alt="{{ img.alt }}">
+                                            {% for icon in item.icons %}
+                                                <img src="./assets/img/icons/option/{{ icon.src }}"
+                                                     alt="{{ icon.alt }}"
+                                                     width="16"
+                                                     height="16"
+                                                >
                                             {% endfor %}
                                         </div>
                                     </dd>
@@ -189,14 +223,14 @@
                                         Цена за сутки:
                                     </dt>
                                     <dd>
-                                        {{ item.price }}
+                                        {{ item.price }} &#8381;
                                     </dd>
                                 </div>
                             </dl>
                             <button class="catalog__item-button">
-                            <span>
-                                Забронировать
-                            </span>
+                                <span>
+                                    Забронировать
+                                </span>
                             </button>
                         </div>
                     </li>

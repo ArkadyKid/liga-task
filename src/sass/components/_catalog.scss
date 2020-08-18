@@ -21,7 +21,7 @@
   flex-direction: column;
   width: 270px;
   height: 450px;
-  background: $color-background;
+  background: #ffffff;
   border: 1px solid #E1E1E1;
   box-shadow: 0 0 25px rgba(208, 208, 208, 0.25);
   border-radius: 6px;
@@ -56,6 +56,10 @@
 .catalog__item-option {
   display: flex;
   align-items: center;
+}
+
+.catalog__item-option--hidden {
+  visibility: hidden;
 }
 
 .catalog__item-option:not(:last-child) {
@@ -101,7 +105,7 @@
   margin: 0;
   border: none;
   border-radius: 25px;
-  color: $color-white;
+  color: #ffffff;
   font-weight: 600;
   font-size: 14px;
   line-height: 17px;
@@ -126,7 +130,7 @@
   width: 34px;
   height: 34px;
   transform: translateY(-50%);
-  content: url('../assets/img/icons/buy-icon.svg');
+  content: url('../assets/img/icons/icon-buy.svg');
 }
 
 
