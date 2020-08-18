@@ -91,14 +91,14 @@
                 </h3>
 
                 {% for square in filter.squares %}
+                    <input class="form__square-input"
+                           type="checkbox"
+                           id="{{ square.id }}"
+                           name="square"
+                           value="{{ square.value }}"
+                    >
                     <label class="form__square-label"
                            for="{{ square.id }}">
-                        <input class="form__square-input"
-                               type="checkbox"
-                               id="{{ square.id }}"
-                               name="square"
-                               value="{{ square.value }}"
-                        >
                         <span>
                         {{ square.title }}
                     </span>
@@ -112,15 +112,15 @@
                 </h3>
 
                 {% for place in filter.places %}
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="{{ place.id }}"
+                           name="place"
+                           value="{{ place.value }}"
+                    >
                     <label class="form__type-label"
                            for="{{ place.id }}"
                     >
-                        <input class="form__type-input"
-                               type="checkbox"
-                               id="{{ place.id }}"
-                               name="place"
-                               value="{{ place.value }}"
-                        >
                         <span>
                         {{ place.title }}
                     </span>
