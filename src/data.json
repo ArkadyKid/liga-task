@@ -1,3 +1,132 @@
 {
-
+  "products": [
+    {
+      "img": "econom.jpg",
+      "alt": "Эконом",
+      "title": "Эконом",
+      "size": "",
+      "square": "1,13 м2",
+      "images": [
+        {
+          "src": "without-option.svg",
+          "alt": "без удобств"
+        }
+      ],
+      "price": "100&#8381;"
+    },
+    {
+      "img": "econom-plus.jpg",
+      "alt": "Эконом плюс",
+      "title": "Эконом плюс",
+      "size": "90х100х180 см",
+      "square": "0,90 м2",
+      "images": [
+        {
+          "src": "box-option.svg",
+          "alt": "коробка"
+        },
+        {
+          "src": "scratch-option.svg",
+          "alt": "когтеточка"
+        }
+      ],
+      "price": "200&#8381;"
+    },
+    {
+      "img": "comfort.jpg",
+      "alt": "Комфорт",
+      "title": "Комфорт",
+      "size": "100х125х180 см",
+      "square": "1,13 м2",
+      "images": [
+        {
+          "src": "box-option.svg",
+          "alt": "коробка"
+        },
+        {
+          "src": "scratch-option.svg",
+          "alt": "когтеточка"
+        },
+        {
+          "src": "ball-option.svg",
+          "alt": "клубок"
+        }
+      ],
+      "price": "250&#8381;"
+    },
+    {
+      "img": "siut.jpg",
+      "alt": "Сьют",
+      "title": "Сьют",
+      "size": "125х125х180 см",
+      "square": "1,56 м2",
+      "images": [
+        {
+          "src": "box-option.svg",
+          "alt": "коробка"
+        },
+        {
+          "src": "scratch-option.svg",
+          "alt": "когтеточка"
+        },
+        {
+          "src": "ball-option.svg",
+          "alt": "клубок"
+        }
+      ],
+      "price": "350&#8381;"
+    },
+    {
+      "img": "lux.jpg",
+      "alt": "Люкс",
+      "title": "Люкс",
+      "size": "160х160х180 см",
+      "square": "2,56 м2",
+      "images": [
+        {
+          "src": "box-option.svg",
+          "alt": "коробка"
+        },
+        {
+          "src": "scratch-option.svg",
+          "alt": "когтеточка"
+        },
+        {
+          "src": "ball-option.svg",
+          "alt": "клубок"
+        },
+        {
+          "src": "house-option.svg",
+          "alt": "дом"
+        }
+      ],
+      "price": "500&#8381;"
+    },
+    {
+      "img": "super-lux.jpg",
+      "alt": "Супер люкс",
+      "title": "Супер люкс",
+      "size": "180х160х180 см",
+      "square": "2,88 м2",
+      "images": [
+        {
+          "src": "box-option.svg",
+          "alt": "коробка"
+        },
+        {
+          "src": "scratch-option.svg",
+          "alt": "когтеточка"
+        },
+        {
+          "src": "ball-option.svg",
+          "alt": "клубок"
+        },
+        {
+          "src": "house-option.svg",
+          "alt": "дом"
+        }
+      ],
+      "price": "600&#8381;"
+    }
+  ]
 }

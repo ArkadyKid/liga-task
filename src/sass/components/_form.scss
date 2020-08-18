@@ -64,8 +64,10 @@
 .form__square-label,
 .form__type-label {
   position: relative;
-  font-size: 14px;
   margin-left: 30px;
+  max-width: 100%;
+  font-size: 14px;
+  word-break: break-word;
   cursor: pointer;
 }
 
@@ -129,7 +131,7 @@
 }
 
 .form__reset {
-  background: #FFFFFF;
+  background: $color-background;
   border: 2px solid #FAC663;
   box-shadow: 04px 4px rgba(0, 0, 0, 0.25);
   border-radius: 25px;

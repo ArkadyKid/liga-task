@@ -6,6 +6,8 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Rubik:wght@400;500;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="./css/index.css?ver=2">
 </head>
 <body>
@@ -135,6 +137,73 @@
                 Сбросить фильтр
             </button>
         </form>
+        <section class="main__catalog catalog">
+            <h2 class="catalog__title">
+                Каталог
+            </h2>
+            <ul class="catalog__list">
+
+                {% for item in products %}
+                    <li class="catalog__item">
+                        <img src="./assets/img/items/{{ item.img }}"
+                             alt="{{ item.alt }}"
+                             width="270"
+                             height="185"
+                        >
+                        <div class="catalog__item-wrapper">
+                        <span class="catalog__title-item">
+                            {{ item.title }}
+                        </span>
+                            <dl class="catalog__item-options">
+                                <div class="catalog__item-option">
+                                    <dt>
+                                        Размеры (ШхГхВ) -
+                                    </dt>
+                                    <dd>
+                                        {{ item.size }}
+                                    </dd>
+                                </div>
+                                <div class="catalog__item-option">
+                                    <dt>
+                                        Площадь -
+                                    </dt>
+                                    <dd>
+                                        {{ item.square }}
+                                    </dd>
+                                </div>
+                                <div class="catalog__item-option">
+                                    <dt>
+                                        Оснащение номера
+                                    </dt>
+                                    <dd>
+                                        <div class="catalog__item-icons">
+                                            {% for img in item.images %}
+                                            <img src="./assets/img/icons/{{ img.src }}"
+                                                 alt="{{ img.alt }}">
+                                            {% endfor %}
+                                        </div>
+                                    </dd>
+                                </div>
+                                <div class="catalog__item-option catalog__item-option--price">
+                                    <dt>
+                                        Цена за сутки:
+                                    </dt>
+                                    <dd>
+                                        {{ item.price }}
+                                    </dd>
+                                </div>
+                            </dl>
+                            <button class="catalog__item-button">
+                            <span>
+                                Забронировать
+                            </span>
+                            </button>
+                        </div>
+                    </li>
+                {% endfor %}
+
+            </ul>
+        </section>
     </div>
 </main>
 <footer class="footer">

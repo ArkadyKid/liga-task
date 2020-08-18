@@ -3,6 +3,7 @@
   justify-content: space-between;
   flex-direction: column;
   width: 1368px;
+  max-width: 100%;
   margin: 71px auto 0;
   padding: 62px 80px 100px 118px;
 }
@@ -15,4 +16,9 @@
   font-size: 36px;
   line-height: 43px;
   color: #151B28;
+}
+
+.main__wrapper {
+  display: flex;
+  justify-content: space-between;
 }

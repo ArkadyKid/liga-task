@@ -1,5 +1,12 @@
+.nav {
+  max-width: 80%;
+}
+
 .nav__list {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
   margin: 0;
   padding: 0;
   list-style: none;
@@ -13,7 +20,7 @@
 }
 
 .nav__item a {
-  color: #1A212F;
+  color: $color-text;
 }
 
 .nav__item a:hover,
