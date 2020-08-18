@@ -5,9 +5,12 @@ import concat from 'gulp-concat';
 import autoprefixer from 'gulp-autoprefixer';
 import notify from 'gulp-notify';
 import csso from 'gulp-csso';
+import twig from 'gulp-twig';
 import sourcemaps from 'gulp-sourcemaps';
 import babel from 'gulp-babel';
+import data from 'gulp-data';
 import uglify from 'gulp-uglify';
+import fs from 'fs';
 
 function bs(done) {
   browserSync.init({
@@ -38,8 +41,10 @@ function styles() {
     .pipe(browserSync.stream());
 }
 
-function html() {
-  return gulp.src('src/index.html').pipe(gulp.dest('dist'));
+function twigGulp() {
+  return gulp.src('src/index.twig').pipe(data(
+    () => JSON.parse(fs.readFileSync('src/data-filter.json')),
+  )).pipe(twig()).pipe(gulp.dest('dist'));
 }
 
 function scripts() {
@@ -65,11 +70,11 @@ function assets() {
 function watchFiles() {
   gulp.watch('src/**/*.scss', styles);
   gulp.watch('src/**/*.js', gulp.series(scripts, browserSyncReload));
-  gulp.watch('src/*.html',
-    gulp.series(gulp.parallel(code, html), browserSyncReload));
+  gulp.watch('src/*.twig',
+    gulp.series(gulp.parallel(code, twigGulp), browserSyncReload));
 }
 
-export const build = gulp.parallel(styles, scripts, assets, html);
+export const build = gulp.parallel(styles, scripts, assets, twigGulp);
 export const watch = gulp.parallel(watchFiles, bs);
 
 const def = gulp.series(build, watch);

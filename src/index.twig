@@ -1,0 +1,153 @@
+<!doctype html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/index.css?ver=2">
+</head>
+<body>
+<header class="header">
+    <div class="header__wrapper">
+        <h1 class="header__title">
+            Интернет магазин "Котейка"
+        </h1>
+        <section class="header__logo">
+            <h3 class="header__logo-title">
+                Логотип "Котейка"
+            </h3>
+            <a href="./main.html"
+               aria-label="Логотип 'Котейка'"
+            >
+                <img src="./assets/img/logo.svg"
+                     alt="Логотип 'Котейка'"
+                     width="64"
+                     height="52"
+                >
+            </a>
+        </section>
+        <nav class="header__nav nav">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="./about.html">
+                        Почему мы?
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./catalog.html">
+                        Номера
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./feedbacks.html">
+                        Отзывы
+                    </a>
+                </li>
+                <li class="nav__item">
+                    <a href="./contacts.html">
+                        Как нас найти
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<main class="main">
+    <h2 class="main__title">
+        Наши номера
+    </h2>
+    <div class="main__wrapper">
+        <form class="main__form form"
+              method="post"
+        >
+            <fieldset class="form__price">
+                <h3 class="form__price-title">
+                    Цена за сутки, &#8381;
+                </h3>
+                <div class="form__price-wrapper">
+                    <label class="form__price-label"
+                           for="min-price"
+                    >
+                            <span>
+                                От
+                            </span>
+                        <input type="number"
+                               id="min-price"
+                               name="min-price"
+                               value="100"
+                        >
+                    </label>
+                    <label class="form__price-label"
+                           for="max-price"
+                    >
+                            <span>
+                                До
+                            </span>
+                        <input type="number"
+                               id="max-price"
+                               name="max-price"
+                               value="600"
+                        >
+                    </label>
+                </div>
+            </fieldset>
+            <fieldset class="form__square">
+                <h3 class="form__square-title">
+                    Площадь
+                </h3>
+
+                {% for square in squares %}
+                    <label class="form__square-label"
+                           for="{{ square.id }}">
+                        <input class="form__square-input"
+                               type="checkbox"
+                               id="{{ square.id }}"
+                               name="square"
+                               value="{{ square.value }}"
+                        >
+                        <span>
+                        {{ square.title }}
+                    </span>
+                    </label>
+                {% endfor %}
+
+            </fieldset>
+            <fieldset class="form__type">
+                <h3 class="form__type-title">
+                    Оснащение номера
+                </h3>
+
+                {% for place in places %}
+                <label class="form__type-label"
+                       for="{{ place.id }}">
+                    <input class="form__type-input"
+                           type="checkbox"
+                           id="{{ place.id }}"
+                           name="place"
+                           value="{{ place.value }}"
+                    >
+                    <span>
+                        {{ place.title }}
+                    </span>
+                </label>
+                {% endfor %}
+
+            </fieldset>
+            <button class="form__submit"
+                    type="submit"
+            >
+                Применить
+            </button>
+            <button class="form__reset"
+                    type="reset"
+            >
+                Сбросить фильтр
+            </button>
+        </form>
+    </div>
+</main>
+<script src="./js/index.js?ver=2" type="module"></script>
+</body>
+</html>

@@ -1,0 +1,61 @@
+{
+  "squares": [
+    {
+      "value": "063",
+      "id": "063-square",
+      "title": "0.63 м2"
+    },
+    {
+      "value": "090",
+      "id": "090-square",
+      "title": "0.90 м2"
+    },
+    {
+      "value": "113",
+      "id": "113-square",
+      "title": "1.13 м2"
+    },
+    {
+      "value": "156",
+      "id": "156-square",
+      "title": "0.63 м2"
+    },
+    {
+      "value": "256",
+      "id": "256-square",
+      "title": "2.56 м2"
+    },
+    {
+      "value": "257",
+      "id": "257-square",
+      "title": "2.57 м2"
+    }
+  ],
+  "places": [
+    {
+      "value": "free",
+      "id": "free-type",
+      "title": "Пустой номер"
+    },
+    {
+      "value": "lounger",
+      "id": "lounger-type",
+      "title": "Лежак"
+    },
+    {
+      "value": "scratch",
+      "id": "scratch-type",
+      "title": "Когтеточка"
+    },
+    {
+      "value": "game",
+      "id": "game-type",
+      "title": "Игровой комплекс"
+    },
+    {
+      "value": "house",
+      "id": "house-type",
+      "title": "Домик"
+    }
+  ]
+}
