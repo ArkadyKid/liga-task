@@ -1,3 +1,3 @@
-import hideResetButton from './hideResetButton';
+import showResetButton from './showResetButton';
 
-console.log(hideResetButton());
+showResetButton();

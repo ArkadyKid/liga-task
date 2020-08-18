@@ -143,6 +143,10 @@
   border-radius: 25px;
 }
 
+.form__reset--hide {
+  @include visually-hidden;
+}
+
 .form__submit:hover,
 .form__submit:focus,
 .form__reset:focus,
