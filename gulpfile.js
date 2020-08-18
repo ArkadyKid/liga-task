@@ -43,8 +43,11 @@ function styles() {
 
 function twigGulp() {
   return gulp.src('src/index.twig').pipe(data(
-    () => JSON.parse(fs.readFileSync('src/data-filter.json')),
-  )).pipe(twig()).pipe(gulp.dest('dist'));
+    () => JSON.parse(fs.readFileSync('src/options.json')),
+  )).pipe(data(
+    () => JSON.parse(fs.readFileSync('src/data.json')),
+  )).pipe(twig())
+    .pipe(gulp.dest('dist'));
 }
 
 function scripts() {
@@ -72,6 +75,8 @@ function watchFiles() {
   gulp.watch('src/**/*.js', gulp.series(scripts, browserSyncReload));
   gulp.watch('src/*.twig',
     gulp.series(gulp.parallel(code, twigGulp), browserSyncReload));
+  gulp.watch('src/*.json',
+    gulp.series(gulp.parallel(code, twigGulp, styles), browserSyncReload));
 }
 
 export const build = gulp.parallel(styles, scripts, assets, twigGulp);

@@ -30,26 +30,15 @@
         </section>
         <nav class="header__nav nav">
             <ul class="nav__list">
-                <li class="nav__item">
-                    <a href="./about.html">
-                        Почему мы?
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="./catalog.html">
-                        Номера
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="./feedbacks.html">
-                        Отзывы
-                    </a>
-                </li>
-                <li class="nav__item">
-                    <a href="./contacts.html">
-                        Как нас найти
-                    </a>
-                </li>
+
+                {% for item in menu %}
+                    <li class="nav__item">
+                        <a href="{{ item.href }}">
+                            {{ item.title }}
+                        </a>
+                    </li>
+                {% endfor %}
+
             </ul>
         </nav>
     </div>
@@ -98,7 +87,7 @@
                     Площадь
                 </h3>
 
-                {% for square in squares %}
+                {% for square in filter.squares %}
                     <label class="form__square-label"
                            for="{{ square.id }}">
                         <input class="form__square-input"
@@ -119,7 +108,7 @@
                     Оснащение номера
                 </h3>
 
-                {% for place in places %}
+                {% for place in filter.places %}
                 <label class="form__type-label"
                        for="{{ place.id }}">
                     <input class="form__type-input"
@@ -148,6 +137,29 @@
         </form>
     </div>
 </main>
+<footer class="footer">
+    <div class="footer__container">
+        <div class="footer__wrapper">
+            <span class="footer__copyright">
+                &#169; 2020 Все права защищены
+            </span>
+            <a class="footer__privacy"
+               target="_blank"
+               href="./privacy.html"
+            >
+                Политика конфиденциальности
+            </a>
+        </div>
+        <span class="footer__development">
+            Сделано в
+            <a href="koteyka_production.ru"
+               target="_blank"
+            >
+                Koteyka_Production
+            </a>
+        </span>
+    </div>
+</footer>
 <script src="./js/index.js?ver=2" type="module"></script>
 </body>
 </html>
