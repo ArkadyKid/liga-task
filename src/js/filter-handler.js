@@ -14,7 +14,6 @@ const onResetButtonClick = () => {
 
 const onAcceptButtonClick = () => {
   state.setData(getFilteredProducts());
-  console.log(state.getData());
   renderItems(getFilteredProducts());
 };
 

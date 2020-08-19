@@ -1,8 +1,8 @@
 const catalog = document.querySelector('.catalog__list');
 
-export default (data) => {
+export default (products) => {
   catalog.innerHTML = '';
-  data.forEach((product) => {
+  products.forEach((product) => {
     const li = document.createElement('li');
     const img = document.createElement('img');
     const divWrapper = document.createElement('div');

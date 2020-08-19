@@ -1,6 +1,6 @@
-import data from '../data.json';
+import state from './state';
 
-const { products } = data;
+const products = state.getData();
 const checkboxInputs = document.forms[0].querySelectorAll('input[type="checkbox"]');
 
 export default () => {
