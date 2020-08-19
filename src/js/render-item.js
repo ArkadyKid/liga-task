@@ -1,11 +1,8 @@
-import json from '../data.json';
-
-const data = json;
 const catalog = document.querySelector('.catalog__list');
 
-export default () => {
+export default (data) => {
   catalog.innerHTML = '';
-  data.products.forEach((product) => {
+  data.forEach((product) => {
     const li = document.createElement('li');
     const img = document.createElement('img');
     const divWrapper = document.createElement('div');
@@ -77,6 +74,7 @@ export default () => {
     divPriceOption.append(dtPrice);
     divPriceOption.append(ddPrice);
     button.classList.add('catalog__item-button');
+    button.type = 'button';
     divWrapper.append(button);
     spanButton.textContent = 'Забронировать';
     button.append(spanButton);

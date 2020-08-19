@@ -20,32 +20,32 @@
   "filter": {
     "squares": [
       {
-        "value": "063",
+        "value": "0.63",
         "id": "063-square",
         "title": "0.63 м2"
       },
       {
-        "value": "090",
+        "value": "0.90",
         "id": "090-square",
         "title": "0.90 м2"
       },
       {
-        "value": "113",
+        "value": "1.13",
         "id": "113-square",
         "title": "1.13 м2"
       },
       {
-        "value": "156",
+        "value": "1.56",
         "id": "156-square",
-        "title": "0.63 м2"
+        "title": "1.56 м2"
       },
       {
-        "value": "256",
+        "value": "2.56",
         "id": "256-square",
         "title": "2.56 м2"
       },
       {
-        "value": "257",
+        "value": "2.57",
         "id": "257-square",
         "title": "2.57 м2"
       }
@@ -57,8 +57,8 @@
         "title": "Пустой номер"
       },
       {
-        "value": "lounger",
-        "id": "lounger-type",
+        "value": "box",
+        "id": "box-type",
         "title": "Лежак"
       },
       {

@@ -119,7 +119,7 @@
   margin-bottom: 25px;
 }
 
-.form__submit,
+.form__accept,
 .form__reset {
   width: 185px;
   padding: 15px 0 17px;
@@ -130,7 +130,7 @@
   cursor: pointer;
 }
 
-.form__submit {
+.form__accept {
   margin-bottom: 11px;
   border: 2px solid #FAC663;
   background: #FAC663;
@@ -147,8 +147,8 @@
   @include visually-hidden;
 }
 
-.form__submit:hover,
-.form__submit:focus,
+.form__accept:hover,
+.form__accept:focus,
 .form__reset:focus,
 .form__reset:hover {
   opacity: 0.7;

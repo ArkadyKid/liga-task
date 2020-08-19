@@ -5,11 +5,12 @@
       "alt": "Эконом",
       "title": "Эконом",
       "size": "",
-      "square": "1,13",
+      "square": "1.13",
       "icons": [
         {
           "src": "icon-without.svg",
-          "alt": "без удобств"
+          "alt": "без удобств",
+          "value": "free"
         }
       ],
       "price": "100"
@@ -19,15 +20,17 @@
       "alt": "Эконом плюс",
       "title": "Эконом плюс",
       "size": "90х100х180",
-      "square": "0,90",
+      "square": "0.90",
       "icons": [
         {
           "src": "icon-box.svg",
-          "alt": "коробка"
+          "alt": "коробка",
+          "value": "box"
         },
         {
           "src": "icon-scratch.svg",
-          "alt": "когтеточка"
+          "alt": "когтеточка",
+          "value": "scratch"
         }
       ],
       "price": "200"
@@ -37,19 +40,22 @@
       "alt": "Комфорт",
       "title": "Комфорт",
       "size": "100х125х180",
-      "square": "1,13",
+      "square": "1.13",
       "icons": [
         {
           "src": "icon-box.svg",
-          "alt": "коробка"
+          "alt": "коробка",
+          "value": "box"
         },
         {
           "src": "icon-scratch.svg",
-          "alt": "когтеточка"
+          "alt": "когтеточка",
+          "value": "scratch"
         },
         {
           "src": "icon-ball.svg",
-          "alt": "клубок"
+          "alt": "клубок",
+          "value": "ball"
         }
       ],
       "price": "250"
@@ -59,19 +65,22 @@
       "alt": "Сьют",
       "title": "Сьют",
       "size": "125х125х180",
-      "square": "1,56",
+      "square": "1.56",
       "icons": [
         {
           "src": "icon-box.svg",
-          "alt": "коробка"
+          "alt": "коробка",
+          "value": "box"
         },
         {
           "src": "icon-scratch.svg",
-          "alt": "когтеточка"
+          "alt": "когтеточка",
+          "value": "scratch"
         },
         {
           "src": "icon-ball.svg",
-          "alt": "клубок"
+          "alt": "клубок",
+          "value": "ball"
         }
       ],
       "price": "350"
@@ -81,23 +90,27 @@
       "alt": "Люкс",
       "title": "Люкс",
       "size": "160х160х180",
-      "square": "2,56",
+      "square": "2.56",
       "icons": [
         {
           "src": "icon-box.svg",
-          "alt": "коробка"
+          "alt": "коробка",
+          "value": "box"
         },
         {
           "src": "icon-scratch.svg",
-          "alt": "когтеточка"
+          "alt": "когтеточка",
+          "value": "scratch"
         },
         {
           "src": "icon-ball.svg",
-          "alt": "клубок"
+          "alt": "клубок",
+          "value": "ball"
         },
         {
           "src": "icon-house.svg",
-          "alt": "дом"
+          "alt": "дом",
+          "value": "house"
         }
       ],
       "price": "500"
@@ -107,23 +120,27 @@
       "alt": "Супер люкс",
       "title": "Супер люкс",
       "size": "180х160х180",
-      "square": "2,88",
+      "square": "2.88",
       "icons": [
         {
           "src": "icon-box.svg",
-          "alt": "коробка"
+          "alt": "коробка",
+          "value": "box"
         },
         {
           "src": "icon-scratch.svg",
-          "alt": "когтеточка"
+          "alt": "когтеточка",
+          "value": "scratch"
         },
         {
           "src": "icon-ball.svg",
-          "alt": "клубок"
+          "alt": "клубок",
+          "value": "ball"
         },
         {
           "src": "icon-house.svg",
-          "alt": "дом"
+          "alt": "дом",
+          "value": "house"
         }
       ],
       "price": "600"
