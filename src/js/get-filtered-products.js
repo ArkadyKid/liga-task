@@ -13,11 +13,11 @@ export default () => {
     const checkValue = values
       .some((value) => checkedValue
         .includes(value));
-    const iconsObject = values.filter((value) => typeof value === 'object');
-    const checkFeature = iconsObject
-      .some((icons) => icons
-        .some((icon) => checkedValue
-          .includes(icon.value)));
+    const featuresObject = values.filter((value) => typeof value === 'object');
+    const checkFeature = featuresObject
+      .some((features) => features
+        .some((feature) => checkedValue
+          .includes(feature.value)));
     const checkPrice = (product.price >= minPrice)
                     && (product.price <= maxPrice);
     return checkValue && checkFeature && checkPrice;

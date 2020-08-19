@@ -155,14 +155,14 @@
 
                     {% for item in sort  %}
                         <li class="sort__item">
+                            <img src="{{ item.icon }}"
+                                 alt="{{ item.alt }}"
+                                 width="5"
+                                 height="10"
+                            >
                             <button class="sort__select"
                                     data-sort="{{ item.data }}"
                             >
-                                <img src="{{ item.icon }}"
-                                     alt="{{ item.alt }}"
-                                     width="5"
-                                     height="10"
-                                >
                                 {{ item.text }}
                             </button>
                         </li>
@@ -171,73 +171,6 @@
                 </ul>
             </section>
             <ul class="catalog__list">
-
-                {% for item in products %}
-                    <li class="catalog__item">
-                        <img src="./assets/img/items/{{ item.img }}"
-                             alt="{{ item.alt }}"
-                             width="270"
-                             height="185"
-                        >
-                        <div class="catalog__item-wrapper">
-                            <span class="catalog__title-item">
-                                {{ item.title }}
-                            </span>
-                            <dl class="catalog__item-options">
-                                {% set className = '' %}
-                                {% if item.size == false %}
-                                    {% set className = 'catalog__item-option--hidden' %}
-                                {% endif %}
-                                <div class="catalog__item-option {{ className }}">
-                                    <dt>
-                                        Размеры (ШхГхВ) -
-                                    </dt>
-                                    <dd>
-                                        {{ item.size }} см
-                                    </dd>
-                                </div>
-                                <div class="catalog__item-option">
-                                    <dt>
-                                        Площадь -
-                                    </dt>
-                                    <dd>
-                                        {{ item.square }} м2
-                                    </dd>
-                                </div>
-                                <div class="catalog__item-option">
-                                    <dt>
-                                        Оснащение номера
-                                    </dt>
-                                    <dd>
-                                        <div class="catalog__item-icons">
-                                            {% for icon in item.icons %}
-                                                <img src="./assets/img/icons/option/{{ icon.src }}"
-                                                     alt="{{ icon.alt }}"
-                                                     width="16"
-                                                     height="16"
-                                                >
-                                            {% endfor %}
-                                        </div>
-                                    </dd>
-                                </div>
-                                <div class="catalog__item-option catalog__item-option--price">
-                                    <dt>
-                                        Цена за сутки:
-                                    </dt>
-                                    <dd>
-                                        {{ item.price }} &#8381;
-                                    </dd>
-                                </div>
-                            </dl>
-                            <button class="catalog__item-button">
-                                <span>
-                                    Забронировать
-                                </span>
-                            </button>
-                        </div>
-                    </li>
-                {% endfor %}
-
             </ul>
         </section>
     </div>

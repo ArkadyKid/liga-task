@@ -1,13 +1,22 @@
+import state from './state';
 import data from '../data.json';
-import renderItem from './render-item';
+import renderItems from './render-items';
 import getFilteredProducts from './get-filtered-products';
 
-const { products } = data;
+const products = state.getData();
 const resetButton = document.querySelector('.form__reset');
 const acceptButton = document.querySelector('.form__accept');
 
-const onResetButtonClick = () => renderItem(products);
-const onAcceptButtonClick = () => renderItem(getFilteredProducts());
+const onResetButtonClick = () => {
+  state.setData(data.products);
+  renderItems(products);
+};
+
+const onAcceptButtonClick = () => {
+  state.setData(getFilteredProducts());
+  console.log(state.getData());
+  renderItems(getFilteredProducts());
+};
 
 export default () => {
   resetButton.addEventListener('click', onResetButtonClick);

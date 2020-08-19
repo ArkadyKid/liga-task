@@ -83,25 +83,25 @@
       "text": "По площади",
       "icon": "./assets/img/icons/sort/icon-up.svg",
       "alt": "вверх",
-      "data": "squareUp"
+      "data": "square-up"
     },
     {
       "text": "По площади",
       "icon": "./assets/img/icons/sort/icon-down.svg",
       "alt": "вниз",
-      "data": "squareDown"
+      "data": "square-down"
     },
     {
       "text": "По цене",
       "icon": "./assets/img/icons/sort/icon-up.svg",
       "alt": "вверх",
-      "data": "priceUp"
+      "data": "price-up"
     },
     {
       "text": "По цене",
       "icon": "./assets/img/icons/sort/icon-down.svg",
       "alt": "вниз",
-      "data": "priceDown"
+      "data": "price-down"
     }
   ]
 }

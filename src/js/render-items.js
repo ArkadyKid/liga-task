@@ -2,7 +2,6 @@ const catalog = document.querySelector('.catalog__list');
 
 export default (data) => {
   catalog.innerHTML = '';
-  console.log(data);
   data.forEach((product) => {
     const li = document.createElement('li');
     const img = document.createElement('img');
