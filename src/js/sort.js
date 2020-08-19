@@ -1,16 +1,14 @@
 import _ from 'lodash';
 import state from './state';
 import renderItems from './render-items';
+import removeActiveSortClass from './utils';
 
 const sortButtons = document.querySelectorAll('.sort__select');
 
 export default () => {
   sortButtons.forEach((button) => {
     const onButtonClick = (evt) => {
-      const activeItem = document.querySelector('.sort__item--active');
-      if (activeItem) {
-        activeItem.classList.remove('sort__item--active');
-      }
+      removeActiveSortClass();
       button.parentElement.classList.add('sort__item--active');
       const products = state.getData();
       const sorts = {
