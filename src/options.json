@@ -45,9 +45,9 @@
         "title": "2.56 м2"
       },
       {
-        "value": "2.57",
-        "id": "257-square",
-        "title": "2.57 м2"
+        "value": "2.88",
+        "id": "288-square",
+        "title": "2.88 м2"
       }
     ],
     "places": [
@@ -82,22 +82,26 @@
     {
       "text": "По площади",
       "icon": "./assets/img/icons/sort/icon-up.svg",
-      "alt": "вверх"
+      "alt": "вверх",
+      "data": "squareUp"
     },
     {
       "text": "По площади",
       "icon": "./assets/img/icons/sort/icon-down.svg",
-      "alt": "вниз"
+      "alt": "вниз",
+      "data": "squareDown"
     },
     {
       "text": "По цене",
       "icon": "./assets/img/icons/sort/icon-up.svg",
-      "alt": "вверх"
+      "alt": "вверх",
+      "data": "priceUp"
     },
     {
       "text": "По цене",
       "icon": "./assets/img/icons/sort/icon-down.svg",
-      "alt": "вниз"
+      "alt": "вниз",
+      "data": "priceDown"
     }
   ]
 }

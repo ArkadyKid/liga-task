@@ -155,7 +155,9 @@
 
                     {% for item in sort  %}
                         <li class="sort__item">
-                            <button class="sort__select">
+                            <button class="sort__select"
+                                    data-sort="{{ item.data }}"
+                            >
                                 <img src="{{ item.icon }}"
                                      alt="{{ item.alt }}"
                                      width="5"
