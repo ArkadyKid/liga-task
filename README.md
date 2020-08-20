@@ -1,15 +1,8 @@
-# Gulp template
-
-## About 
-Template for simple project like landing page (with minimum js).
-
-## Stack 
-Twig, Scss, Gulp, ESLint, Babel.
+# Liga A task
 
 ## Install
 
 ````
-$ git init
-$ git clone git@github.com:ArkadyKid/gulp-template.git
+$ git clone git@github.com:ArkadyKid/liga-task.git
 $ npm install
 ````
