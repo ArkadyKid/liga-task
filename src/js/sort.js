@@ -1,26 +1,19 @@
-import _ from 'lodash';
-import data from './data';
+import service from './service';
 import renderItems from './render-items';
-import removeActiveSortClass from './utils';
 
 const sortButtons = document.querySelectorAll('.sort__select');
 
 export default () => {
   sortButtons.forEach((button) => {
     const onButtonClick = (evt) => {
-      removeActiveSortClass();
+      const activeItem = document.querySelector('.sort__item--active');
+      if (activeItem) {
+        activeItem.classList.remove('sort__item--active');
+      }
       button.parentElement.classList.add('sort__item--active');
-      const items = data.getData();
-      const sorts = {
-        priceUp: () => items.sort((a, b) => Number(a.price) - Number(b.price)),
-        priceDown: () => items.sort((a, b) => Number(b.price) - Number(a.price)),
-        squareUp: () => items.sort((a, b) => Number(a.square) - Number(b.square)),
-        squareDown: () => items.sort((a, b) => Number(b.square) - Number(a.square)),
-      };
-      const sort = _.camelCase(evt.target.dataset.sort);
-      const sorteditems = sorts[sort]();
-      data.setData(sorteditems);
-      renderItems(sorteditems);
+      const sortedItems = service.getSortedData(evt);
+      service.setData(sortedItems);
+      renderItems(sortedItems);
     };
     button.addEventListener('click', onButtonClick);
   });

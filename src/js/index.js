@@ -1,10 +1,10 @@
-import data from './data';
+import service from './service';
 import showResetButton from './show-reset-button';
-import filterHandler from './filter-handler';
+import filter from './filter';
 import sort from './sort';
 import renderItems from './render-items';
 
-renderItems(data.getData());
+renderItems(service.getData());
 showResetButton();
-filterHandler();
+filter();
 sort();

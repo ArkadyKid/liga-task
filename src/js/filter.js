@@ -1,20 +1,17 @@
-import data from './data';
+import service from './service';
 import renderItems from './render-items';
-import removeActiveSortClass from './utils';
 
 const resetButton = document.querySelector('.form__reset');
 const acceptButton = document.querySelector('.form__accept');
 
 const onResetButtonClick = () => {
-  data.setData(data.getInitialData());
-  removeActiveSortClass();
-  renderItems(data.getInitialData());
+  service.setData(service.getInitialData());
+  renderItems(service.getSortedData());
 };
 
 const onAcceptButtonClick = () => {
-  data.setData(data.getFilteredData());
-  removeActiveSortClass();
-  renderItems(data.getFilteredData());
+  service.setData(service.getFilteredData());
+  renderItems(service.getSortedData());
 };
 
 export default () => {

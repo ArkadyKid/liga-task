@@ -1,9 +1,11 @@
+import _ from 'lodash';
 import data from '../data.json';
 
-class Data {
+class Service {
   constructor() {
     this.data = data.items;
     this.initialData = data.items;
+    this.sortType = 'priceUp';
   }
 
   getData() {
@@ -14,8 +16,16 @@ class Data {
     return this.initialData;
   }
 
+  getSortType() {
+    return this.sortType;
+  }
+
   setData(val) {
     this.data = val;
+  }
+
+  setSortType(val) {
+    this.sortType = val;
   }
 
   getFilteredData() {
@@ -39,6 +49,22 @@ class Data {
       return checkValue && checkFeature && checkPrice;
     });
   }
+
+  getSortedData(evt = null) {
+    const items = this.getData();
+    const sorts = {
+      priceUp: () => items.sort((a, b) => Number(a.price) - Number(b.price)),
+      priceDown: () => items.sort((a, b) => Number(b.price) - Number(a.price)),
+      squareUp: () => items.sort((a, b) => Number(a.square) - Number(b.square)),
+      squareDown: () => items.sort((a, b) => Number(b.square) - Number(a.square)),
+    };
+    if (evt) {
+      const sort = _.camelCase(evt.target.dataset.sort);
+      this.sortType = sort;
+      return sorts[sort]();
+    }
+    return sorts[this.sortType]();
+  }
 }
 
-export default new Data();
+export default new Service();
