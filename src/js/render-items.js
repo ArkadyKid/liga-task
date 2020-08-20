@@ -1,8 +1,8 @@
 const catalog = document.querySelector('.catalog__list');
 
-export default (products) => {
+export default (items) => {
   catalog.innerHTML = '';
-  products.forEach((product) => {
+  items.forEach((item) => {
     const li = document.createElement('li');
     const img = document.createElement('img');
     const divWrapper = document.createElement('div');
@@ -26,12 +26,12 @@ export default (products) => {
 
     li.classList.add('catalog__item');
     catalog.append(li);
-    img.src = `./assets/img/items/${product.img}`;
-    img.alt = product.alt;
+    img.src = `./assets/img/items/${item.img}`;
+    img.alt = item.alt;
     li.append(img);
     divWrapper.classList.add('catalog__item-wrapper');
     spanTitle.classList.add('catalog__title-item');
-    spanTitle.textContent = product.title;
+    spanTitle.textContent = item.title;
     divWrapper.append(spanTitle);
     li.append(divWrapper);
     dl.classList.add('catalog__item-options');
@@ -39,8 +39,8 @@ export default (products) => {
     divSizeOption.classList.add('catalog__item-option');
     dl.append(divSizeOption);
     dtSize.textContent = 'Размеры (ШхГхВ) -';
-    ddSize.textContent = `${product.size} см`;
-    if (!product.size) {
+    ddSize.textContent = `${item.size} см`;
+    if (!item.size) {
       divSizeOption.classList.add('catalog__item-option--hidden');
     }
     divSizeOption.append(dtSize);
@@ -48,7 +48,7 @@ export default (products) => {
     divSquareOption.classList.add('catalog__item-option');
     dl.append(divSquareOption);
     dtSquare.textContent = 'Площадь -';
-    ddSquare.textContent = `${product.square} м2`;
+    ddSquare.textContent = `${item.square} м2`;
     divSquareOption.append(dtSquare);
     divSquareOption.append(ddSquare);
     divFeatureOption.classList.add('catalog__item-option');
@@ -58,7 +58,7 @@ export default (products) => {
     divFeatureOption.append(ddFeature);
     divIconsFeature.classList.add('catalog__item-icons');
     ddFeature.append(divIconsFeature);
-    product.icons.forEach((icon) => {
+    item.icons.forEach((icon) => {
       const imgIcon = document.createElement('img');
       imgIcon.src = `./assets/img/icons/option/${icon.src}`;
       imgIcon.alt = icon.alt;
@@ -70,7 +70,7 @@ export default (products) => {
     divPriceOption.classList.add('catalog__item-option--price');
     dl.append(divPriceOption);
     dtPrice.textContent = 'Цена за сутки:';
-    ddPrice.textContent = `${product.price} \u20bd`;
+    ddPrice.textContent = `${item.price} \u20bd`;
     divPriceOption.append(dtPrice);
     divPriceOption.append(ddPrice);
     button.classList.add('catalog__item-button');

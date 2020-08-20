@@ -1,5 +1,5 @@
 import _ from 'lodash';
-import state from './state';
+import data from './data';
 import renderItems from './render-items';
 import removeActiveSortClass from './utils';
 
@@ -10,17 +10,17 @@ export default () => {
     const onButtonClick = (evt) => {
       removeActiveSortClass();
       button.parentElement.classList.add('sort__item--active');
-      const products = state.getData();
+      const items = data.getData();
       const sorts = {
-        priceUp: () => products.sort((a, b) => Number(a.price) - Number(b.price)),
-        priceDown: () => products.sort((a, b) => Number(b.price) - Number(a.price)),
-        squareUp: () => products.sort((a, b) => Number(a.square) - Number(b.square)),
-        squareDown: () => products.sort((a, b) => Number(b.square) - Number(a.square)),
+        priceUp: () => items.sort((a, b) => Number(a.price) - Number(b.price)),
+        priceDown: () => items.sort((a, b) => Number(b.price) - Number(a.price)),
+        squareUp: () => items.sort((a, b) => Number(a.square) - Number(b.square)),
+        squareDown: () => items.sort((a, b) => Number(b.square) - Number(a.square)),
       };
       const sort = _.camelCase(evt.target.dataset.sort);
-      const sortedProducts = sorts[sort]();
-      state.setData(sortedProducts);
-      renderItems(sortedProducts);
+      const sorteditems = sorts[sort]();
+      data.setData(sorteditems);
+      renderItems(sorteditems);
     };
     button.addEventListener('click', onButtonClick);
   });

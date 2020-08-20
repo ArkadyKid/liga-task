@@ -1,23 +1,20 @@
-import state from './state';
-import data from '../data.json';
+import data from './data';
 import renderItems from './render-items';
-import getFilteredProducts from './get-filtered-products';
 import removeActiveSortClass from './utils';
 
-const products = state.getData();
 const resetButton = document.querySelector('.form__reset');
 const acceptButton = document.querySelector('.form__accept');
 
 const onResetButtonClick = () => {
-  state.setData(data.products);
+  data.setData(data.getInitialData());
   removeActiveSortClass();
-  renderItems(products);
+  renderItems(data.getInitialData());
 };
 
 const onAcceptButtonClick = () => {
-  state.setData(getFilteredProducts());
+  data.setData(data.getFilteredData());
   removeActiveSortClass();
-  renderItems(getFilteredProducts());
+  renderItems(data.getFilteredData());
 };
 
 export default () => {
