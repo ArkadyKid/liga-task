@@ -3,7 +3,7 @@ const catalog = document.querySelector('[data-card="catalog"]');
 export default (items) => {
   catalog.innerHTML = '';
   items.forEach((item) => {
-    const cardTemplate = document.querySelector('[data-card="card-template"]').content.querySelector('[data-card="card"]');
+    const cardTemplate = document.querySelector('[data-template="card"]').content.querySelector('[data-card="card"]');
     const cardElement = cardTemplate.cloneNode(true);
     const imgElement = cardElement.querySelector('[data-card="img"]');
     const titleElement = cardElement.querySelector('[data-card="title"]');
@@ -19,7 +19,7 @@ export default (items) => {
       sizeOptionElement.parentElement.classList.add('catalog__item-option--hidden');
     }
     item.features.forEach((feature) => {
-      const featureTemplate = document.querySelector('[data-card="feature-template"]').content.querySelector('[data-card="feature"]');
+      const featureTemplate = document.querySelector('[data-template="feature"]').content.querySelector('[data-card="feature"]');
       const featureElement = featureTemplate.cloneNode(true);
       featureElement.src = `./assets/img/icons/option/${feature.src}`;
       featureElement.alt = feature.alt;
