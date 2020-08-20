@@ -16,7 +16,7 @@
   flex-direction: column;
   width: 100%;
   margin: 0;
-  padding: 12px 0 12px 15px;
+  padding: 12px 0 12px 0;
   list-style: none;
 }
 
@@ -30,8 +30,10 @@
 
 .sort__select {
   position: relative;
-  padding: 0;
+  width: 100%;
+  padding: 10px 20px;
   border: none;
+  text-align: left;
   background-color: transparent;
   cursor: pointer;
 }
@@ -42,11 +44,10 @@
 }
 
 .sort__item img {
-  margin-right: 5px;
-}
-
-.sort__item:not(:last-child) {
-  margin-bottom: 25px;
+  position: absolute;
+  top: 50%;
+  left: 5px;
+  transform: translateY(-50%);
 }
 
 .sort__item--active {
