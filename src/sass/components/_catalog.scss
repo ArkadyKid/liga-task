@@ -66,8 +66,8 @@
   margin-bottom: 10px;
 }
 
-.catalog__item-option dd,
-.catalog__item-option dt {
+dd,
+dt {
   display: inline-block;
   margin: 0;
   font-size: 14px;
@@ -83,7 +83,7 @@
   margin-right: 10px;
 }
 
-.catalog__item-icons {
+.catalog__item-features {
   display: flex;
   justify-content: space-between;
   margin-left: 12px;
@@ -91,11 +91,11 @@
   overflow: hidden;
 }
 
-.catalog__item-icons img {
+.catalog__item-features img {
   vertical-align: bottom;
 }
 
-.catalog__item-icons img:not(:last-child) {
+.catalog__item-features img:not(:last-child) {
   margin-right: 8px;
 }
 

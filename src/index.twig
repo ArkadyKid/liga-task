@@ -147,7 +147,8 @@
                 <h3 class="sort__title">
                     Сортировка
                 </h3>
-                <ul class="sort__list">
+                <ul class="sort__list"
+                >
 
                     {% for item in sort  %}
                         <li class="sort__item">
@@ -166,7 +167,9 @@
 
                 </ul>
             </section>
-            <ul class="catalog__list">
+            <ul class="catalog__list"
+                data-card="catalog"
+            >
             </ul>
         </section>
     </div>
@@ -194,6 +197,66 @@
         </span>
     </div>
 </footer>
+<template data-card="card-template">
+    <li class="catalog__item"
+        data-card="card"
+
+    >
+        <img data-card="img"
+             src=""
+             alt=""
+             width="270"
+             height="185"
+        >
+        <div class="catalog__item-wrapper">
+            <span class="catalog__title-item"
+                  data-card="title"
+            ></span>
+            <dl class="catalog__item-options">
+                <div class="catalog__item-option">
+                    <dt>
+                        Размеры (ШхГхВ) -
+                    </dt>
+                    <dd data-card="size"></dd>
+                </div>
+                <div class="catalog__item-option">
+                    <dt>
+                        Площадь -
+                    </dt>
+                    <dd data-card="square"></dd>
+                </div>
+                <div class="catalog__item-option">
+                    <dt>
+                        Оснащение номера
+                    </dt>
+                    <dd class="catalog__item-features"
+                        data-card="features"
+                    >
+                    </dd>
+                </div>
+                <div class="catalog__item-option catalog__item-option--price">
+                    <dt>
+                        Цена за сутки:
+                    </dt>
+                    <dd data-card="price"></dd>
+                </div>
+            </dl>
+            <button class="catalog__item-button">
+                    <span>
+                        Забронировать
+                    </span>
+            </button>
+        </div>
+    </li>
+</template>
+<template data-card="feature-template">
+    <img src=""
+         alt=""
+         width="16"
+         height="16"
+         data-card="feature"
+    >
+</template>
 <script src="./js/index.min.js"></script>
 </body>
 </html>
