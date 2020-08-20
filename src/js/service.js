@@ -3,8 +3,8 @@ import data from '../data.json';
 
 class Service {
   constructor() {
-    this.data = data.items;
     this.initialData = data.items;
+    this.data = data.items;
     this.sortType = 'priceUp';
   }
 
