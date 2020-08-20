@@ -49,8 +49,8 @@ class Service {
       const checkedValuesFeature = [];
       const filteredBySquare = getFilteredByType('square', checkedValuesSquare, item);
       const filteredByFeature = getFilteredByType('feature', checkedValuesFeature, item);
-      const minPrice = document.forms[0].querySelector('#min-price').value;
-      const maxPrice = document.forms[0].querySelector('#max-price').value;
+      const minPrice = document.forms[0].querySelector('[data-input="min-price"]').value;
+      const maxPrice = document.forms[0].querySelector('[data-input="max-price"]').value;
       const checkPrice = (item.price >= minPrice) && (item.price <= maxPrice);
       return filteredBySquare() && filteredByFeature() && checkPrice;
     });
