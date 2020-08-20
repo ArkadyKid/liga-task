@@ -29,24 +29,30 @@ class Service {
   }
 
   getFilteredData() {
-    const checkboxInputs = document.forms[0].querySelectorAll('input[type="checkbox"]');
-    const checkedValue = [];
-    const minPrice = document.forms[0].querySelector('#min-price').value;
-    const maxPrice = document.forms[0].querySelector('#max-price').value;
-    checkboxInputs.forEach((input) => input.checked && checkedValue.push(input.value));
+    const getFilteredByType = (type, values, item) => {
+      const inputs = document.forms[0].querySelectorAll(`input[name=${type}]`);
+      inputs.forEach((input) => input.checked && values.push(input.value));
+      return () => {
+        if (values.length === 0) {
+          return true;
+        }
+        if (type === 'feature') {
+          return Object.values(item.features)
+            .some((value) => values.includes(value.value));
+        }
+        return Object.values(item)
+          .some((value) => values.includes(value));
+      };
+    };
     return this.initialData.filter((item) => {
-      const values = Object.values(item);
-      const checkValue = values
-        .some((value) => checkedValue
-          .includes(value));
-      const featuresObject = values.filter((value) => typeof value === 'object');
-      const checkFeature = featuresObject
-        .some((features) => features
-          .some((feature) => checkedValue
-            .includes(feature.value)));
-      const checkPrice = (item.price >= minPrice)
-        && (item.price <= maxPrice);
-      return checkValue && checkFeature && checkPrice;
+      const checkedValuesSquare = [];
+      const checkedValuesFeature = [];
+      const filteredBySquare = getFilteredByType('square', checkedValuesSquare, item);
+      const filteredByFeature = getFilteredByType('feature', checkedValuesFeature, item);
+      const minPrice = document.forms[0].querySelector('#min-price').value;
+      const maxPrice = document.forms[0].querySelector('#max-price').value;
+      const checkPrice = (item.price >= minPrice) && (item.price <= maxPrice);
+      return filteredBySquare() && filteredByFeature() && checkPrice;
     });
   }
 

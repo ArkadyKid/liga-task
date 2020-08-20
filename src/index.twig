@@ -111,18 +111,18 @@
                     Оснащение номера
                 </h3>
 
-                {% for place in filter.places %}
+                {% for feature in filter.features %}
                     <input class="form__type-input"
                            type="checkbox"
-                           id="{{ place.id }}"
-                           name="place"
-                           value="{{ place.value }}"
+                           id="{{ feature.id }}"
+                           name="feature"
+                           value="{{ feature.value }}"
                     >
                     <label class="form__type-label"
-                           for="{{ place.id }}"
+                           for="{{ feature.id }}"
                     >
                         <span>
-                        {{ place.title }}
+                        {{ feature.title }}
                     </span>
                     </label>
                 {% endfor %}

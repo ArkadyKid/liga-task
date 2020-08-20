@@ -58,10 +58,10 @@ export default (items) => {
     divFeatureOption.append(ddFeature);
     divIconsFeature.classList.add('catalog__item-icons');
     ddFeature.append(divIconsFeature);
-    item.icons.forEach((icon) => {
+    item.features.forEach((feature) => {
       const imgIcon = document.createElement('img');
-      imgIcon.src = `./assets/img/icons/option/${icon.src}`;
-      imgIcon.alt = icon.alt;
+      imgIcon.src = `./assets/img/icons/option/${feature.src}`;
+      imgIcon.alt = feature.alt;
       imgIcon.width = 16;
       imgIcon.height = 16;
       divIconsFeature.append(imgIcon);

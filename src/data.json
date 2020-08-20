@@ -6,7 +6,7 @@
       "title": "Эконом",
       "size": "",
       "square": "1.13",
-      "icons": [
+      "features": [
         {
           "src": "icon-without.svg",
           "alt": "без удобств",
@@ -21,7 +21,7 @@
       "title": "Эконом плюс",
       "size": "90х100х180",
       "square": "0.90",
-      "icons": [
+      "features": [
         {
           "src": "icon-box.svg",
           "alt": "коробка",
@@ -41,7 +41,7 @@
       "title": "Комфорт",
       "size": "100х125х180",
       "square": "1.13",
-      "icons": [
+      "features": [
         {
           "src": "icon-box.svg",
           "alt": "коробка",
@@ -66,7 +66,7 @@
       "title": "Сьют",
       "size": "125х125х180",
       "square": "1.56",
-      "icons": [
+      "features": [
         {
           "src": "icon-box.svg",
           "alt": "коробка",
@@ -91,7 +91,7 @@
       "title": "Люкс",
       "size": "160х160х180",
       "square": "2.56",
-      "icons": [
+      "features": [
         {
           "src": "icon-box.svg",
           "alt": "коробка",
@@ -121,7 +121,7 @@
       "title": "Супер люкс",
       "size": "180х160х180",
       "square": "2.88",
-      "icons": [
+      "features": [
         {
           "src": "icon-box.svg",
           "alt": "коробка",
