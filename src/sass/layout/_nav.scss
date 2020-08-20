@@ -8,7 +8,7 @@
   justify-content: space-between;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 27px 0 33px 0;
   list-style: none;
   text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
@@ -17,6 +17,7 @@
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
+  max-width: 180px;
 }
 
 .nav__item a {

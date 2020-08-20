@@ -11,6 +11,10 @@
   box-shadow: 0 1px 6px -1px rgba(0,0,0,0.71);
 }
 
+.header__logo {
+  padding: 10px 0;
+}
+
 .header__logo a:hover,
 .header__logo a:focus {
   opacity: 0.7;
@@ -21,7 +25,6 @@
   align-items: center;
   justify-content: space-between;
   width: 1368px;
-  height: 71px;
   padding-right: 80px;
   padding-left: 118px;
 }

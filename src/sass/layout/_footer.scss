@@ -25,6 +25,16 @@
   margin-right: 30px;
 }
 
+.footer__wrapper {
+  display: flex;
+  align-items: center;
+}
+
+.footer__copyright,
+.footer__privacy {
+  max-width: 50%;
+}
+
 .footer__privacy,
 .footer__development a {
   color: currentColor;
